@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Manusartifex</title>
+	<link rel="stylesheet" href="navbar.css">
+	<link rel="stylesheet" href="image&text.css">
+	<link rel="stylesheet" href="general.css">
+	<link rel="stylesheet" href="galleria.css">
+	<link rel="stylesheet" href="form.css">
+	
+</head>
+<body>
+
+	<nav class="navbar">
+		<div class="navbar-header">
+			<div class="logo nav-item"><a href="#" onclick="showPage('home')">Manusartifex</a></div>
+			<button class="menu-toggle hamburger" id="menuToggle" onclick="toggleMenu()"></button>
+		</div>
+		<div class="nav-links" id="navLinks">
+			<a href="#" onclick="showPage('icone')" class="nav-item">Icone</a>
+			<a href="#" onclick="showPage('scagliola')" class="nav-item">Scagliola</a>
+			<a href="#" onclick="showPage('pietra')" class="nav-item">Pietra</a>
+			<a href="#" onclick="showPage('cloisonne')" class="nav-item">Cloisonne</a>
+			<a href="#contact" class="nav-item">Contatti</a>
+		</div>
+	</nav>
+	
+	
+	<div id="home" class="section">
+		
+		<div class="cover" style="background-image: url(img/stone/stonelady.jpg); background-position:50% 43%"></div>
+		<h1>Benvenuti nel mondo dell'arte senza tempo</h1>
+		
+		<div class="griglia">
+			<div class="text-box">
+				<p>	Mauro Calzavara è specializzato in tecniche antiche come l’encausto, il cloisonné, la scagliola e la creazione di icone sacre su legno e pietra. Ogni opera è realizzata con passione e dedizione, combinando tradizione e unicità.
+				</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/studio/caravaggio.jpg); background-position:50% 50% " alt="Immagine di esempio"></div>
+		</div>
+		<h1 style="margin-top:10%">Le lavorazioni</h1>
+		<div class="galleriaHome">
+			<a href="#" onclick="showPage('cloisonne')" style="text-decoration: none;"><img src="img/cloisonne/nativitygallery.jpg" alt="img"><p>Cloisonne</p> </a>
+			<a href="#" onclick="showPage('pietra')" style="text-decoration: none;"><img src="img/stone/crucifixgallery.jpg" alt="img"><p>Pietra</p> </a>
+			<a href="#" onclick="showPage('icone')" style="text-decoration: none;"><img src="img/icon/eliagallery.jpg" alt="img"><p>Icone</p> </a>
+			<a href="#" onclick="showPage('scagliola')" style="text-decoration: none;"><img src="img/scagliola/baptismgallery.jpg" alt="img"><p>Scagliola</p> </a>
+		</div>
+		<h1>L'artigiano</h1>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="text-box">
+				<p>Mauro Calzavara è un artigiano che ha costruito la propria formazione attraverso un percorso di studio e perfezionamento in tecniche artistiche tradizionali. Il suo cammino si distingue per la partecipazione a numerosi corsi specializzati, che gli hanno permesso di acquisire competenze dalla doratura all’iconografia, dalla pittura alle tecniche decorative.</p>
+				</div>
+			<div class="image-box" style="background-image: url(img/studio/dettagli1.jpeg); background-position:50% 85%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="image-box" style="background-image: url(img/studio/studio1.jpeg); background-position:50% 70%" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				</p>Nel campo dell’iconografia, ha seguito corsi alla scuola San Luca di Padova con Enrico Bertaboni e Annarosa Ambrosi, e un altro a Trento con Fabio Nones. Ha approfondito la doratura con Grazia Sgrilli al laboratorio San Damiano di Pistoia e con Lucia Morici a Vercelli. Per le tecniche decorative ha frequentato corsi di stuccomarmo e tecnica del colore a Thiene (VI), con Mauro Patrini e Renato Giangualano. Ha studiato l’encausto con Vico Calabrò a Belluno e la pittura a olio con Alessandra Andreose a Padova.</p>
+			</div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="text-box">
+				<p>Importanti anche i corsi di smalto su rame presso l’ARtCHIVIO Enamel Museum di Ponte San Pietro (BG), con Luigi Barato, Beatrice Mellana e Oleksii Koval. Ha seguito inoltre un corso di incisione a bulino presso la scuola orafa di Vicenza.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/studio/dettagli2.jpeg); background-position:50% 85%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="image-box" style="background-image: url(img/studio/noale.jpg);" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				<p>Oggi Mauro vive e lavora a Noale, in provincia di Venezia, dove ha il suo laboratorio. In questo borgo medievale ha trovato un luogo ispirante, perfetto per coniugare vita e lavoro. Qui porta avanti con passione la sua attività quotidiana.</p>
+			</div>
+		</div>
+		<section id="contact" class="contact-section">
+			<div class="contact-container">
+				<h2>Contatti</h2>
+				<form class="contact-form" action="#" method="POST">
+					<label for="name">Nome</label>
+					<input type="text" id="name" name="name" required />
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required />
+
+					<label for="message">Messaggio</label>
+					 <textarea id="message" name="message" rows="5" 
+						placeholder="Buongiono, scrivo per avere informazioni in merito..." 
+						onfocus="clearPlaceholder(this)" 
+						onblur="restorePlaceholder(this)">Buongiono, scrivo per avere informazioni in merito...</textarea>
+						<button type="submit">Invia</button>
+				</form>
+			</div>
+		</section>
+
+	</div>
+	<div id="icone" class="section hidden">
+		
+		<div class="cover" style="background-image: url(img/icon/noli_me_tangere_gallery.jpg); background-position:50% 63%"></div>
+		<h1>Le Icone</h1>
+		
+		<div class="griglia">
+			<div class="text-box">
+				<p>	Le icone sono immagini sacre che rappresentano Cristo, la Vergine, i santi o scene della vita cristiana. Non sono semplici opere d’arte: sono finestre sul mistero, strumenti di preghiera e meditazione. L’icona, infatti, non si limita a illustrare, ma vuole rendere presente il divino attraverso un linguaggio simbolico preciso, carico di significati teologici. I colori, le pose, gli sguardi, ogni elemento segue regole antiche che rimandano a una tradizione millenaria, custodita e trasmessa con rispetto e rigore.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/icon/lady02gallery.jpg); background-position:50% 63%" alt="Immagine di esempio"></div>
+		</div>
+		<h2>Tra arte e fede</h1>
+		<div class="griglia">
+			<div class="image-box" style="background-image: url(img/icon/lady01.jpg);  background-position:50% 57%" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				<p>Proprio per questo motivo, realizzare un’icona richiede studio, sensibilità spirituale e grande perizia tecnica. Mauro Calzavara possiede tutte queste qualità: le sue icone sono autentiche, profonde, capaci di toccare il cuore. Ogni sua opera riflette la serietà con cui si è formato. Ha frequentato il corso di doratura presso il laboratorio San Damiano di Pistoia, guidato dalla maestra Grazia Sgrilli, imparando l’arte delicata dell’oro applicato con foglia e bolo. Ha proseguito poi con un altro corso di doratura presso la scuola di iconografia a Vercelli con la maestra Lucia Morici, affinando ulteriormente la tecnica.</p>
+			</div>
+		</div>
+		<div class="galleriaHome" style="margin-top:2%;margin-bottom:2%;">
+			<img src="img/icon/christ.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/icon/coppo.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/icon/elia.jpg" style="object-fit: contain; background-color:white" alt="img">
+		</div>
+		<div class="griglia">
+			<div class="text-box">
+				<p>Non si è fermato alla doratura: ha approfondito anche la tecnica del colore seguendo un corso presso il Centro europeo per i Mestieri del Patrimonio a Thiene (VI) con Renato Giangualano, acquisendo una padronanza cromatica fondamentale per l’iconografia. Infine, ha frequentato un corso di pittura a olio con Alessandra Andreose a Padova, ampliando le sue competenze artistiche.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/icon/guarientoGallery.jpg)" alt="Immagine di esempio"></div>
+		</div>
+		<div><h2>Una tradizione millenaria</h2></div>
+		<div class="griglia">
+			<div class="image-box" style="background-image: url(img/icon/lady03gallery.jpeg)" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				<p>Tutto questo percorso rende le sue icone non solo belle da vedere, ma anche capaci di comunicare con intensità spirituale. Mauro Calzavara non copia: interpreta fedelmente la tradizione, la studia e la vive, trasformando ogni icona in un’opera che unisce arte e fede.</p>
+			</div>
+		</div>
+		<div class="galleriaHome" style="margin-top:2%;margin-bottom:2%;">
+			<img src="img/icon/lady01.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/icon/lady02.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/icon/guariento.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/icon/noli_me_tangere.jpg" style="object-fit: contain; background-color:white" alt="img">
+		 </div>
+	</div>
+	
+	<div id="scagliola" class="section hidden">
+		
+		<div class="cover" style="background-image: url(img/scagliola/baptismGallery.jpg); background-position:50% 60%"></div>
+		<h1>La Scagliola</h1>
+		
+		<div class="griglia">
+			<div class="text-box">
+				<p>La scagliola è una tecnica artistica raffinata e antica, utilizzata per imitare l’aspetto di marmi e pietre dure con una miscela di gesso, pigmenti naturali e colle. Diffusasi in Italia tra il XVII e il XVIII secolo, ha avuto grande fortuna soprattutto in epoca barocca e neoclassica, decorando con eleganza pareti, altari, colonne e arredi. Richiede una straordinaria abilità manuale, sensibilità estetica e profonda conoscenza dei materiali.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/scagliola/lady02.jpg); background-position:50% 35%" alt="Immagine di esempio"></div>
+		</div>
+		<h2>Un'arte antica e raffinata</h1>
+		<div class="griglia">
+			<div class="image-box" style="background-image: url(img/scagliola/egitto.jpg);  background-position:50% 67%" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				<p>	Tra i pochi maestri contemporanei capaci di portare avanti questa tradizione con rigore e passione si distingue Mauro Calzavara, la cui abilità è il frutto di una lunga esperienza e di un percorso formativo di altissimo livello. Mauro ha approfondito la tecnica dello stuccomarmo al Centro europeo per i Mestieri del Patrimonio di Thiene (VI) sotto la guida di Mauro Patrini.</p>
+			</div>
+		</div>
+		<div class="galleriaHome" style="margin-top:2%;margin-bottom:2%;">
+			<img src="img/scagliola/angel.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/scagliola/lady01.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/scagliola/saint_michael.jpg" style="object-fit: contain; background-color:white" alt="img">
+		</div>
+		<div class="griglia">
+			<div class="text-box">
+				<p>Il lavoro di Mauro Calzavara si distingue per l’eleganza, l’equilibrio e l’armonia: qualità che derivano non solo da un innato senso artistico, ma anche da una formazione rigorosa e da un grande rispetto per l’arte decorativa tradizionale.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/scagliola/holy_family.jpg); background-position:50% 20%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="galleriaHome" style="margin-top:2%;margin-bottom:2%; margin-left:2%; margin-right:2%">
+			<img src="img/scagliola/baptism.jpg" style="object-fit: contain; background-color:white;" alt="img">
+			<img src="img/scagliola/veronese.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/scagliola/lady02.jpg" style="object-fit: contain; background-color:white" alt="img">
+		</div>
+	</div>
+	
+	
+	<div id="pietra" class="section hidden">
+		<div class="cover" style="background-color:#333; background-image: url(img/stone/crucifixgallery.jpg); background-position:50% 30%"></div>
+		<h1>La Pietra</h1>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="text-box">
+				<p>Mauro Calzavara ha avuto l’intuizione originale e raffinata di unire tre antiche tecniche artistiche – la scagliola, la doratura a foglia oro e la pittura a olio – per creare opere uniche: icone sacre realizzate su pietra, in particolare sull’ardesia. Questa scelta materica non è casuale: l’ardesia, con la sua superficie scura e vellutata, esalta il contrasto con la lucentezza dell’oro e la profondità dei colori a olio, conferendo all’opera una forza visiva e spirituale straordinaria.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/stone/stoneladygallery.jpg); background-position:50% 35%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="image-box" style="background-image: url(img/stone/angelgallery.jpg);  background-position:50% 20%" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				<p>La scagliola, tradizionalmente usata per imitare il marmo e altri materiali pregiati, viene qui reinterpretata con finezza, aggiungendo texture e rilievi delicati al fondo dell’immagine. L’applicazione della foglia oro, eseguita con maestria, dona sacralità e luce all’icona, richiamando l’estetica bizantina. La pittura a olio completa l’opera con dettagli intensi, espressivi, pieni di pathos.</p>
+			</div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="text-box">
+				<p>Attraverso questa fusione, Calzavara ha saputo inventare un linguaggio visivo personale, in cui la tradizione incontra la sperimentazione. Le sue icone su pietra non sono semplici oggetti decorativi, ma testimonianze vive di una ricerca artistica profonda e spirituale, che rende ogni pezzo irripetibile. Un connubio tra materia, luce e colore che affascina e invita alla contemplazione.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/stone/stonelady2gallery.jpg); background-position:50% 35%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="galleriaHome" style="margin-top:2%;margin-bottom:2%; margin-left:2%; margin-right:2%">
+			<img src="img/stone/angel.jpg" style="object-fit: contain; background-color:white;" alt="img">
+			<img src="img/stone/stonelady.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/stone/crucifix.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/stone/stonelady2.jpg" style="object-fit: contain; background-color:white" alt="img">
+		</div>
+		
+	</div>
+	<div id="cloisonne" class="section hidden">
+		<div class="cover" style="background-color:#333; background-image: url(img/cloisonne/nativitygallery.jpg); background-position:50% 30%"></div>
+		<h1>Cloisonne</h1>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="text-box">
+				<p>Il cloisonné è una tecnica decorativa antichissima, usata sin dall’antichità per impreziosire oggetti e opere d’arte. Si realizza tracciando un disegno su una base metallica, solitamente in rame, e creando delle celle (cloison in francese) con sottili fili metallici saldati. Questi spazi vengono poi riempiti con smalti colorati in polvere, che vengono cotti ad alta temperatura per fondersi e creare una superficie liscia, lucida e resistente. Il risultato finale è un’opera luminosa e ricca di dettagli, in cui forma e colore si integrano armoniosamente.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/cloisonne/christ02gallery.jpg); background-position:50% 15%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="image-box" style="background-image: url(img/cloisonne/nativitygallery.jpg);  background-position:50% 20%" alt="Immagine di esempio"></div>
+			<div class="text-box">
+				<p>Mauro Calzavara ha scelto di approfondire questa tecnica affascinante partecipando al corso di smalto su rame presso ARtCHIVIO Enamel Museum di Ponte San Pietro (BG), un punto di riferimento per gli artisti che si dedicano allo smalto. Il corso è stato tenuto da tre importanti maestri: il prof. Luigi Barato, Beatrice Mellana e Oleksii Koval, artisti di grande esperienza e riconoscimento internazionale, che hanno guidato i partecipanti attraverso le varie fasi della lavorazione con rigore e passione.</p>
+			</div>
+		</div>
+		<div class="griglia" style="margin-bottom:2%">
+			<div class="text-box">
+				<p>Grazie a questa esperienza, Mauro Calzavara ha potuto integrare il cloisonné nella sua ricerca artistica, combinandolo con altre tecniche e sviluppando uno stile personale. Le sue opere riflettono la precisione del metodo tradizionale unita a una forte sensibilità contemporanea, dando vita a creazioni originali e spiritualmente intense.</p>
+			</div>
+			<div class="image-box" style="background-image: url(img/cloisonne/christgallery.jpg); background-position:50% 35%" alt="Immagine di esempio"></div>
+		</div>
+		<div class="galleriaHome" style="margin-top:2%;margin-bottom:2%; margin-left:2%; margin-right:2%">
+			<img src="img/cloisonne/christ.jpg" style="object-fit: contain; background-color:white" alt="img">
+			<img src="img/cloisonne/angel.jpg" style="object-fit: contain; background-color:white;" alt="img">
+			<img src="img/cloisonne/christ02.jpg" style="object-fit: contain; background-color:white" alt="img">
+		</div>
+		
+	</div>
+<script>
+const navLinks = document.getElementById("navLinks");
+const menuToggle = document.getElementById("menuToggle");
+const navItems = document.querySelectorAll(".nav-item");
+
+function toggleMenu() {
+  const isOpen = navLinks.classList.toggle("show");
+
+  if (isOpen) {
+	menuToggle.classList.remove("hamburger");
+	menuToggle.classList.add("x-icon");
+	document.addEventListener("click", handleOutsideClick);
+  } else {
+	closeMenu();
+  }
+}
+
+function closeMenu() {
+  navLinks.classList.remove("show");
+  menuToggle.classList.remove("x-icon");
+  menuToggle.classList.add("hamburger");
+  document.removeEventListener("click", handleOutsideClick);
+}
+
+function handleOutsideClick(event) {
+  if (
+	!navLinks.contains(event.target) &&
+	!menuToggle.contains(event.target)
+  ) {
+	closeMenu();
+  }
+}
+
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+	navItems.forEach(i => i.classList.remove("active"));
+	item.classList.add("active");
+	closeMenu();
+  });
+});
+
+function showPage(pageId) {
+		  const sections = document.querySelectorAll('.section');
+		  sections.forEach(section => {
+			section.classList.toggle('hidden', section.id !== pageId);
+		  });
+		}
+		
+function clearPlaceholder(el) {
+    if (el.value === el.defaultValue) {
+      el.value = '';
+    }
+  }
+
+function restorePlaceholder(el) {
+    if (el.value === '') {
+      el.value = el.defaultValue;
+    }
+  }
+</script>
+	<footer>
+		<h3>Manusartifex</h3>
+		<p>Email: info@galleriaPagine.com</p>
+		<p>Telefono: +39 012 345 6789</p>
+	</footer>
+</body>
+</html>

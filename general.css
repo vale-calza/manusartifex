@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+@font-face{
+	font-family: "CaviarDreams";
+	src:url("caviar_dreams/CaviarDreams.ttf");
+} 
+
+body {
+	font-family: "CaviarDreams"; 
+	margin: 0; 
+	padding: 0; 
+}
+.hidden { display: none; }
+
+
+footer { background: #333; padding-bottom: 2em; padding-top:2em;color:white; text-align: center; margin-top:2em; }

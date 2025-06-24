@@ -1,0 +1,35 @@
+    .griglia {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 300px;
+    }
+
+    .text-box, .image-box {
+      flex: 1 1 50%;
+      box-sizing: border-box;
+	  height:400px;
+    }
+
+    .text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #d9d3c7;
+	  color:black;
+    }
+
+    .image-box {
+      display: block;
+	  background-size: cover;
+	}
+	
+	
+
+    @media (max-width: 768px) {
+      .text-box, .image-box {
+        flex: 1 1 100%;
+      }
+	  
+    }
