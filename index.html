@@ -24,7 +24,7 @@
 			<a href="#" onclick="showPage('scagliola')" class="nav-item">Scagliola</a>
 			<a href="#" onclick="showPage('pietra')" class="nav-item">Pietra</a>
 			<a href="#" onclick="showPage('cloisonne')" class="nav-item">Cloisonne</a>
-			<a href="#contact" class="nav-item">Contatti</a>
+			<a href="#" class="nav-item" onclick="goToHomeSection('contact')">Contatti</a>
 		</div>
 	</nav>
 	
@@ -46,7 +46,7 @@
 			<a href="#" onclick="showPage('cloisonne')" style="text-decoration: none;"><img src="img/cloisonne/nativitygallery.jpg" alt="img"><p>Cloisonne</p> </a>
 			<a href="#" onclick="showPage('pietra')" style="text-decoration: none;"><img src="img/stone/crucifixgallery.jpg" alt="img"><p>Pietra</p> </a>
 			<a href="#" onclick="showPage('icone')" style="text-decoration: none;"><img src="img/icon/eliagallery.jpg" alt="img"><p>Icone</p> </a>
-			<a href="#" onclick="showPage('scagliola')" style="text-decoration: none;"><img src="img/scagliola/baptismGallery.jpg" alt="img"><p>Scagliola</p> </a>
+			<a href="#" onclick="showPage('scagliola')" style="text-decoration: none;"><img src="img/scagliola/baptismgallery.jpg" alt="img"><p>Scagliola</p> </a>
 		</div>
 		<h1>L'artigiano</h1>
 		<div class="griglia" style="margin-bottom:2%">
@@ -295,6 +295,16 @@ function restorePlaceholder(el) {
       el.value = el.defaultValue;
     }
   }
+  
+function goToHomeSection(sectionId) {
+  showPage('home');
+  setTimeout(() => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 100); // Attendi un po' per assicurarti che la sezione sia visibile
+}
 </script>
 	<footer>
 		<h3>Manusartifex</h3>
