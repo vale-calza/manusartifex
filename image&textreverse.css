@@ -13,8 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
+  text-align: left;
+  padding: 40px;
   background-color: #d9d3c7;
   order: 2;
 }
@@ -22,14 +22,10 @@
 .image-box-reverse {
   order: 1;
   overflow: hidden;
+  display: block;
+	background-size: cover;
 }
 
-.image-box-reverse img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
 @media (max-width: 768px) {
   .text-box-reverse, .image-box-reverse {
