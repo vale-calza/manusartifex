@@ -1,10 +1,9 @@
-
-
 .navbar {
   background-color: #333;
   color: white;
-  position: relative;
-  z-index: 10;
+   position: sticky;
+   top: 0;
+   z-index: 100;
 }
 
 .navbar-header {
@@ -33,23 +32,56 @@
 .nav-links {
   display: flex;
   gap: 1em;
+  position: relative;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5em;
-  transition: background 0.3s;
+.nav-links a,
+  .dropdown-toggle {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+.nav-links a:hover,
+    .nav-links a.active,
+    .dropdown-toggle:hover {
+      background-color: #444;
+      border-radius: 4px;
+    }
+    
+/* Dropdown */
+.dropdown {
+    position: relative;
 }
 
-.nav-links a:hover {
-  background-color: #444;
-  border-radius: 4px;
+.dropdown-toggle::after {
+    content: " ▾";
+    font-size: 0.8em;
+    margin-left: 5px;
 }
 
-.nav-links a.active {
-  background-color: #444;
-  border-radius: 4px;
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 150px;
+    z-index: 99;
+}
+
+.dropdown-content a {
+    padding: 0.5em 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
 }
 
 /* MOBILE */
@@ -72,7 +104,18 @@
   .nav-links.show {
 	display: flex;
   }
+  
+  .dropdown-content {
+    display: flex !important;
+    position: static;
+    background-color: #333;
+    padding-left: 1em;
+  }
 
+  .dropdown:hover .dropdown-content {
+    display: flex !important;
+  }
+  
   .menu-toggle.x-icon::before {
 	content: "✖";
   }
@@ -96,13 +139,21 @@
   }
 
   .nav-links {
-	display: flex !important;
-	justify-content: flex-end;
-	gap: 1.5em;
-	position: static;
-	flex-direction: row;
-	background: none;
-	padding: 0;
+    display: flex !important;
+    justify-content: flex-end;
+    gap: 1.5em;
+  }
+
+  .dropdown-content {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
   }
 
   .menu-toggle {
